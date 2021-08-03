@@ -46,10 +46,6 @@ SQL Server 2019 のリリースに伴い、これまで同梱されていた SQL
 
 ### OS 要件が Windows Server 2016 以降となりました
 Azure AD Connect v2 をインストールするサーバーは Windows Server 2016 以降である必要があります。SQL Server 2019 の要件として Windows Server 2016 以降である必要があるためです。
-可能な限り Windows Server 2016 以降の Windows Server OS をご利用をご検討いただきたいとは思いますが、どうしても Windows Server 2016 以前の OS をご利用頂きたい場合には Azure AD Connect 1.6.4.0 をご利用ください。
-現時点では下記 URL よりダウンロードが可能となっております。
-
-[AADC 1.6.4.0 ダウンロードサイト](https://www.microsoft.com/en-us/download/details.aspx?id=103336)
 
 <a id="anchor4"></a>
 
@@ -165,11 +161,6 @@ Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Services\ADSync\Parameters' | S
 
 Windows Server 2016 以降である必要がありますが、弊社の検証環境では 1.3.x から 2.0.3.0 へのインプレース アップグレードが可能なことを確認しております。同期ルールを手動で変更・追加を行っている環境では変化が生じる可能性もございますので、必ず本番環境と同じ設定を行っているテスト環境での検証、または本番のステージングサーバーを利用したスイング移行が可能であるかをご確認頂いてからの実施をお勧めいたします。
 検証環境で何らかの理由で正常にアップグレードが行えなかった場合には、別途新規サーバーをご用意いただき、新規サーバー上で新規に Azure AD Connect v2 をインストール頂き構築することをご検討ください。
-
----
-**Q: Azure AD Connect v2 は Windows Server 2016 以降に対応していますが、Windows Server 2012 R2 など未対応の OS の場合はどうすればよいですか。**
-
-**A: Azure AD Connect 1.6.4.0 をダウンロードしてご利用ください。**
 
 ---
 **Q: Azure AD Connect のバージョンアップ方法を教えてください**
